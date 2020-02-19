@@ -2,8 +2,12 @@ extends KinematicBody2D
 
 
 var _target = position 
-#3:50 in video 
 
+func _ready():
+	set_process(true)
+	position.y = 30
+	$Tween.interpolate_property(self, "position", position, _target, 1.0, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
+	$Tween.start()
 
 func _physics_process(delta):
 	var shape = $ColorRect.get_rect().size
