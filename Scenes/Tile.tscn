@@ -23,3 +23,5 @@ color = Color( 0.988235, 0.760784, 0.843137, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Tween" type="Tween" parent="."]
