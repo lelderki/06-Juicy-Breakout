@@ -1,5 +1,10 @@
 extends KinematicBody2D
 
+
+var _target = position 
+#3:50 in video 
+
+
 func _physics_process(delta):
 	var shape = $ColorRect.get_rect().size
 	var view = get_viewport().get_visible_rect().size
