@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bensound-funkyelement.wav-5a9110528546e537b831aafd7e123f69.sample"
+
+[deps]
+
+source_file="res://ASSETS/bensound-funkyelement.wav"
+dest_files=[ "res://.import/bensound-funkyelement.wav-5a9110528546e537b831aafd7e123f69.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

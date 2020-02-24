@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scripts/Score.gd" type="Script" id=8]
 [ext_resource path="res://Scripts/Lives.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/Starting.gd" type="Script" id=10]
+[ext_resource path="res://ASSETS/bensound-funkyelement.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 72, 16 )
@@ -35,6 +36,7 @@ current = true
 script = ExtResource( 2 )
 
 [node name="Background" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="Background"]
 position = Vector2( 568.882, 318.203 )
@@ -49,6 +51,7 @@ margin_bottom = 611.0
 color = Color( 0, 0, 0, 0.431373 )
 
 [node name="Paddle" type="KinematicBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 544, 552 )
 script = ExtResource( 4 )
 __meta__ = {
@@ -68,11 +71,13 @@ shape = SubResource( 1 )
 [node name="Tween" type="Tween" parent="Paddle"]
 
 [node name="Wall" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall"]
 polygon = PoolVector2Array( 0, 632, 0, 0, 1024, 0, 1024, 632, 1064, 632, 1064, -40, -48, -40, -48, 632 )
 
 [node name="Tiles" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Tile Row 1" type="Node2D" parent="Tiles" groups=[
 "Tile Row",
@@ -284,5 +289,7 @@ countdown = 3
 [node name="Timer" type="Timer" parent="Starting"]
 wait_time = 10.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
 [connection signal="timeout" from="Starting/Timer" to="Starting" method="_on_Timer_timeout"]
