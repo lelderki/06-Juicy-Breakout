@@ -23,7 +23,6 @@ func _physics_process(delta):
 		target = shape.x / 2
 	if target > view.x - shape.x / 2:
 		target = view.x - shape.x / 2
-	position = Vector2(target, position.y)
 	
 	if target != position.x:
 		var x = position.x + ((target - position.x)*0.2)
@@ -33,6 +32,8 @@ func _physics_process(delta):
 		position = Vector2(x, position.y)
 	else:
 		_change_size(1,1)
+	position = Vector2(target, position.y)
+
 		
 func _change_size(w,h):
 	$ColorRect.rect_scale = Vector2(w,h)
