@@ -10,7 +10,7 @@ Added background
 
 Made tiles bounce
 
-Attempted Paddle stretch and shrink
+Paddle stretch and shrink
 
 Added color to tiles 
 
@@ -38,7 +38,7 @@ As tiles die, they change color
 
 Added star explosion when tiles die
 
-Attempted screen shake when ball hit paddle 
+Screen shake when ball hit paddle 
 
 When ball hits something, there is screen shake 
 
